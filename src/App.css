@@ -1,38 +1,252 @@
-.App {
+:root {
+  --max-width: 960px;
+}
+
+@font-face {
+  font-family: "Markazi Text";
+  src: url("../public/font/MarkaziText-VariableFont_wght.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("../public/font/Karla-VariableFont_wght.ttf") format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Markazi Text';
+}
+
+h2 {
+  font-family: "Karla";
+}
+
+header {
+  display: block;
+}
+
+main {
+  display: block;
+}
+
+footer {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .pageSection>section,
+  .pageSection>article {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 480px) {
+
+  .pageSection>section,
+  .pageSection>article {
+    width: 62vw;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+header>section {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+header {
+  font-family: 'Karla';
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  width: 100vw;
+  background: #fff;
+  height: 129px;
+  align-content: center;
+}
+
+header a:visited {
+  color: black;
+}
+
+header a:hover {
+  color: #495e57;
+}
+
+header img {
+  height: 60px;
+}
+
+.pageSection.highligthts {
+  background: #fff;
+}
+
+.pageSection.hero {
+  font-family: 'Karla';
+  font-size: 20px;
+  color: #fff;
+}
+
+.pageSection.hero h2 {
+  font-family: 'Markazi Text';
+  font-weight: normal;
+  font-size: 64px;
+  color: #f4ce14;
+}
+
+.pageSection.hero h3 {
+  font-family: 'Karla';
+  font-size: 32px;
+  color: #fff;
+}
+
+.pageSection.about {
+  background: #fff;
+  font-family: 'Karla';
+  font-size: 18px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  flex: 1;
+  align-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+nav>ul {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row;
+  padding: 0px;
+}
+
+nav>ul>li {
+  flex: 1;
+  list-style: none;
+  text-align: center;
+  align-content: center;
+
+}
+
+nav>ul>li>a {
+  text-decoration: none;
+}
+
+footer {
+  font-family: 'Karla';
+  font-size: 20px;
+  background-color: #495e57;
+  color: #fff;
+}
+
+footer h3 {
+  font-family: 'Karla';
+  font-size: 24px;
+  font-weight: 800;
+  color: #f4ce14;
+  margin-bottom: 10px;
+}
+
+footer a,
+footer a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #333;
+}
+
+@media (max-width: 480px) {
+  footer>.content {
+
+    display: flex;
+    row-gap: 20px;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    align-items: center;
+  }
+
+}
+
+@media (min-width: 480px) {
+  footer>.content {
+    display: flex;
+    column-gap: 20px;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 62vw;
+    max-width: var(--max-width);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+footer>.content>img {
+  height: 120px;
+  width: 120px;
+  flex: 0;
+}
+
+@media (max-width: 480px) {
+  footer>.content>div {
+    align-items: center;
+    flex: 1;
+  }
+}
+
+@media (min-width: 480px) {
+
+  footer>.content>div {
+    flex: 1;
+  }
+}
+
+
+footer>.content>div>p {
+  flex: 1;
+  margin: 0;
+}
+
+footer>.content>div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: nowrap;
 }
 
-.App-link {
-  color: #61dafb;
+footer .lastItem {
+  flex: 2 1 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html {
+  background-color: #495e57;
+}
+
+button.online-menu {
+  font-family: 'Karla';
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #f4ce14;
+  border-radius: 8px;
+  border: none;
+  height: 55px;
+  width: 165px;
+  padding: 10px;
 }
