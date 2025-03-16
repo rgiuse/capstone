@@ -1,8 +1,15 @@
-function Main({children}){
+import { Routes, Route  } from "react-router";
+import HomePage from "./HomePage";
+import BookingPage from "./BookingPage";
+
+function Main(){
 
     return(
         <main>
-            {children}
+            <Routes> 
+                <Route path="/" element={<HomePage />}></Route>
+                <Route path="/booking" element={<BookingPage />}></Route>
+            </Routes>
         </main>
     );
 
