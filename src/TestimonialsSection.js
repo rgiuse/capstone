@@ -31,15 +31,11 @@ function TestimonialsSection({ title, numTestimonial }) {
 
                     </TestimonialCard>
                     <TestimonialCard name="Francesca" image={francescaPic} rating={5}>
-                    <p>
+                        <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia soluta minima veritatis rerum, beatae, quo, quod exercitationem itaque totam esse laudantium? Sapiente neque vel, corporis et est non repudiandae suscipit?
                         </p>
-
                     </TestimonialCard>
-
                 </div>
-
-
             </section>
         </section>
     );

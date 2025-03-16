@@ -126,7 +126,7 @@ header img {
 .pageSection.about {
   background: #fff;
   font-family: 'Karla';
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -456,4 +456,42 @@ button.reserve-table {
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;  
+}
+
+.about img {
+  margin-top: 3rem;
+  height: 338px;
+  width: 272px;
+  object-fit: cover;
+  border-radius: 16px;
+
+  margin-bottom: 2rem;
+  margin-top: 15%;
+
+}
+
+.about .first-chef{
+  transform: translate(170%, -30%);
+}
+
+.about h2 {
+  font-family: 'Markazi Text';
+  font-size: 64px;
+  color: #495e57;
+}
+
+.about h3 {
+  font-family: 'Markazi Text';
+  font-size: 40px;
+  font-weight: 400;
+  color: #EE9972;
+}
+.about .about-box {
+
+  display: flex;
+}
+
+.about .content {
+  text-align: left;
+  width: 40%;
 }

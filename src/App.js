@@ -18,7 +18,13 @@ import lemonDessert from  './assets/lemon dessert.jpg'
 import bruschetta from './assets/bruschetta.jpg'
 
 
+import chefA from './assets/Mario and Adrian A.jpg'
+import chefB from './assets/restaurant chef B.jpg'
+
+
+
 function App() {
+  const images=[chefA,chefB]
   return (
     <>
       <Head>
@@ -51,7 +57,7 @@ function App() {
           </MenuCard>
         </HighligthtsSection>
         <TestimonialsSection title="What do our customers think?" />
-        <AboutSection title="Little Lemon" subtitle="Chicago" >
+        <AboutSection title="Little Lemon" subtitle="Chicago" images={images}>
         <p>
         Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. The restaurant features a locally-sourced menu with daily specials.
         </p>
