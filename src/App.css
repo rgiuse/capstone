@@ -39,6 +39,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+
   .pageSection>section,
   .pageSection>article {
     display: flex;
@@ -96,8 +97,9 @@ header img {
 
 .pageSection.hero {
   font-family: 'Karla';
-  font-size: 20px;
+  font-size: 216pt0px;
   color: #fff;
+  background: linear-gradient(180deg, #495e57 0 93%, #fff 93% 100%);
 }
 
 .pageSection.hero h2 {
@@ -111,6 +113,14 @@ header img {
   font-family: 'Karla';
   font-size: 32px;
   color: #fff;
+  margin-bottom: 0.5em;
+  ;
+}
+
+.pageSection.hero img {
+  height: 360px;
+  width: 310px;
+  border-radius: 16px;
 }
 
 .pageSection.about {
@@ -203,6 +213,7 @@ footer>.content>img {
   height: 120px;
   width: 120px;
   flex: 0;
+  margin-top: 1em;
 }
 
 @media (max-width: 480px) {
@@ -248,5 +259,201 @@ button.online-menu {
   border: none;
   height: 55px;
   width: 165px;
+}
+
+button.reserve-table {
+  font-family: 'Karla';
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #f4ce14;
+  border-radius: 16px;
+  border: none;
+  height: 35px;
+  width: 200px;
+  margin-top: 2em;
+}
+
+.pageSection.hero>section>article {
+  width: 300px;
+}
+
+@media (min-width: 480px) {
+  .pageSection.hero>section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageSection.hero>section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.pageSection.hero>section>img {
+  margin-top: 3rem;
+}
+
+
+.menu-card {
+  width: 265px;
+  height: 440px;
+  background-color: #EDEFEE;
+  border-radius: 16px 16px 0 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-card h4 {
+  font-family: 'Markazi Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 90%;
+}
+
+.menu-card h5 {
+  font-family: 'Karla';
+  font-style: normal;
+  font-size: 16px;
+}
+
+
+.menu-card .menu-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.menu-card .menu-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: baseline;
+  gap: 11px;
+  margin-top: auto;
+  margin-bottom: 1em;
+  align-self: end;
+}
+
+.menu-card p {
+  font-family: 'Karla';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.menu-card p.price {
+  font-weight: bold;
+  color: #EE9972;
+}
+
+.menu-card .content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20px 100px auto;
+  gap: 2rem;
+  overflow: hidden;
+  padding: 1.4rem;
+}
+
+.menu-card img {
+  border-radius: 16px 16px 0 0;
+  width: 265px;
+  height: 185px;
+}
+
+.highligthts .cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.highligthts .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+
+}
+
+.testimonials {
+  background-color: #edefee;
+}
+
+.testimonials h2,
+.highligthts .title h2 {
+  font-family: 'Markazi Text';
+  font-size: 40px;
+  font-weight: 600;
+
+}
+
+.testimonials .cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 12%
+}
+
+
+.testimonials h2 {
+  font-family: 'Markazi Text';
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+  color: #495e57;
+  padding-top: 2rem;
+
+}
+
+.testimonials .review {
+  height: 205px;
+  width: 200px;
+  background: #fff;
+  box-shadow: 1px 1px 3px #333;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
   padding: 10px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonials .review p {
+  margin-top: 1rem;
+  overflow: scroll;
+}
+
+.testimonials {
+  min-height: 560px;
+}
+
+.testimonials img {
+ height: 50px;
+ width: 50px;
+ border-radius: 50%;
+ object-fit: cover;
+}
+
+.testimonials .image-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;  
 }
