@@ -18,7 +18,9 @@ function BookingForm({ availableTimes, updateAvailableTimes, bookingData, setBoo
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const updatedBookingData = [...bookingData, { dateValue, timeValue, guestsValue, occasionValue }];
+        const resevationNumber = `#${bookingData.length + 1}`;
+
+        const updatedBookingData = [...bookingData, { resevationNumber, dateValue, timeValue, guestsValue, occasionValue }];
         setBookingData(updatedBookingData);
 
         console.log('Form submitted:', updatedBookingData);

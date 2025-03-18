@@ -1,6 +1,6 @@
 function ConfirmedBooking(){
     return (
-        <>The booking has been confirmed!</>
+        <>The reservation has been confirmed!</>
     );
 }
 
