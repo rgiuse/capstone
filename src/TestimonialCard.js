@@ -4,7 +4,7 @@ function TestimonialCard({ name, rating, image, children }) {
 
 
     return (
-        <article class="review">
+        <article className="review">
             <div>
                 {rating >= 1 && <FaStar color="#f4ce14"></FaStar>}
                 {rating >= 2 && <FaStar color="#f4ce14"></FaStar>}

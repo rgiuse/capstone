@@ -6,12 +6,6 @@ import Head from './Head';
 
 import './App.css';
 
-
-
-
-
-
-
 function App() {
 
   return (
@@ -24,6 +18,7 @@ function App() {
         <meta name="author" content="Giuseppe Ranieri" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Little Lemon</title>
+
       </Head>
       <Header>
         <Nav />
@@ -32,6 +27,7 @@ function App() {
       <Footer>
 
       </Footer>
+
     </>
   );
 }
