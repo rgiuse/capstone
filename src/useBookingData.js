@@ -1,16 +1,31 @@
 import { useEffect, useState } from "react";
 
-function useBookingData() {
-    const localStorageKey = 'bookingData';
+function useBookingData(localStorageKey) {
+    //const localStorageKey = 'bookingData';
     const [bookingData, setBookingData] = useState(() => {
         return JSON.parse(localStorage.getItem(localStorageKey)) || []
     });
 
     useEffect(() => {
         localStorage.setItem(localStorageKey, JSON.stringify(bookingData));
-    }, [bookingData])
+    }, [bookingData, localStorageKey])
 
-    return [bookingData, setBookingData];
+
+    const addBookingData = function (data) {
+        if (Array.isArray(data)) {
+            setBookingData([...bookingData, ...data]);
+        }
+        else{
+            setBookingData([...bookingData, data]);
+        }
+           
+    }
+
+    const clearBookingData = function () {
+        setBookingData([]);
+    }
+
+    return [bookingData, addBookingData];
 }
 
 export default useBookingData;

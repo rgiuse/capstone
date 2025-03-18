@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-function BookingForm({ availableTimes, updateAvailableTimes, bookingData, setBookingData, submitForm }) {
+function BookingForm({ availableTimes, updateAvailableTimes, bookingData, addBookingData, submitForm }) {
 
     function getFormattedsDate() {
         const dateNow = new Date();
@@ -20,11 +20,11 @@ function BookingForm({ availableTimes, updateAvailableTimes, bookingData, setBoo
 
         const resevationNumber = `#${bookingData.length + 1}`;
 
-        const updatedBookingData = [...bookingData, { resevationNumber, dateValue, timeValue, guestsValue, occasionValue }];
-        setBookingData(updatedBookingData);
+        const formData = { resevationNumber, dateValue, timeValue, guestsValue, occasionValue };
+        addBookingData(formData);
 
-        console.log('Form submitted:', updatedBookingData);
-        submitForm(updatedBookingData);
+        console.log('Form submitted:', formData);
+        submitForm(formData);
     }
     return (
         <>
