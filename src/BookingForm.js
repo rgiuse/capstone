@@ -72,22 +72,22 @@ function BookingForm({ availableTimes, updateAvailableTimes, bookingData, addBoo
             <h2>Book Now!</h2>
             <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }} onSubmit={handleSubmit}>
                 <label htmlFor="res-date">Choose date</label>
-                <input type="date" id="res-date" value={formik.values['res-date']} min={getFormattedsDate()}
+                <input type="date" id="res-date" name="res-date" value={formik.values['res-date']} min={getFormattedsDate()}
                     onChange={(e) => {
                         formik.handleChange(e);
                         updateAvailableTimes({ type: 'NEW_DATE', value: e.target.value });
                     }} required />
                 {formik.errors["res-date"] && <p style={errorStyle}>{formik.errors["res-date"]}</p>}
                 <label htmlFor="res-time">Choose time</label>
-                <select id="res-time" value={formik.values['res-time']} onChange={(e) => { formik.handleChange(e) }} required>
+                <select id="res-time" name="res-time" value={formik.values['res-time']} onChange={(e) => { formik.handleChange(e) }} required>
                     {availableTimes.map(item => <option key={`${formik.values['res-date']}${item}`}>{item}</option>)}
                 </select>
                 {formik.errors["res-time"] && <p style={errorStyle}>{formik.errors["res-time"]}</p>}
                 <label htmlFor="guests">Number of guests</label>
-                <input type="number" placeholder="1" min="1" max="10" id="guests" value={formik.values['guests']} onChange={(e) => { formik.handleChange(e) }} required />
+                <input type="number" placeholder="1" min="1" max="10" id="guests" name="guests" value={formik.values['guests']} onChange={(e) => { formik.handleChange(e) }} required />
                 {formik.errors["guests"] && <p style={errorStyle}>{formik.errors["guests"]}</p>}
                 <label htmlFor="occasion">Occasion</label>
-                <select id="occasion" value={formik.values['occasion']} onChange={(e) => { formik.handleChange(e) }} required>
+                <select id="occasion" name="occasion" value={formik.values['occasion']} onChange={(e) => { formik.handleChange(e) }} required>
                     <option>Birthday</option>
                     <option>Anniversary</option>
                 </select>

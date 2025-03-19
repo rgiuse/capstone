@@ -403,3 +403,65 @@ test('Test Javascript Validation invalid guests', async () => {
      expect(submitForm).toHaveBeenCalled();
 
 });
+
+
+test('Test Javascript Validation invalid no occasion', async () => {
+    const user = userEvent.setup()
+
+    const availableTimes = ['17:30', '18:00', '19:00'];
+    const updateAvailableTimes = jest.fn();
+    const bookingData = []
+    const addBookingData = jest.fn();
+    const submitForm = jest.fn();
+
+
+    render(
+        <BookingForm availableTimes={availableTimes} updateAvailableTimes={updateAvailableTimes} bookingData={bookingData} addBookingData={addBookingData} submitForm={submitForm} />
+    );
+
+
+    const resDateElement = screen.getByLabelText('Choose date');
+    const resTimeElement = screen.getByLabelText('Choose time');
+    const guestsElement = screen.getByLabelText('Number of guests');
+    const occasionElement = screen.getByLabelText('Occasion');
+
+    const buttonReservation = screen.getByText('Make Your reservation')
+
+
+    expect(resTimeElement.length).toBe(3)
+
+    expect(occasionElement.length).toBe(2)
+
+
+    fireEvent.change(resDateElement, { target: { value: getFormattedsDate(tomorrow) } });
+    expect(resDateElement.getAttribute('value')).toEqual(getFormattedsDate(tomorrow));
+
+
+    await user.selectOptions(resTimeElement, '17:30');
+    expect(screen.getByRole('option', { name: '17:30' }).selected).toBe(true)
+
+    fireEvent.change(guestsElement, { target: { value: '5' } });
+    expect(guestsElement.getAttribute('value')).toEqual('5');
+
+    fireEvent.change(occasionElement, { target: { value: '' } });
+    expect(occasionElement.getAttribute('value')).toEqual(null);
+
+
+    //Check Button is disabled
+    expect(buttonReservation.getAttribute('disabled')).toEqual('');
+
+    //Click Button
+    await user.click(buttonReservation);
+
+    //Call to get new availableTimes
+    expect(updateAvailableTimes).toHaveBeenCalled();
+
+
+    //Call when form isValid
+    expect(addBookingData).not.toHaveBeenCalled();
+    expect(submitForm).not.toHaveBeenCalled();
+
+});
+
+
+
