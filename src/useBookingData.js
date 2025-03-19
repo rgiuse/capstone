@@ -25,7 +25,7 @@ function useBookingData(localStorageKey) {
         setBookingData([]);
     }
 
-    return [bookingData, addBookingData];
+    return [bookingData, addBookingData, clearBookingData];
 }
 
 export default useBookingData;

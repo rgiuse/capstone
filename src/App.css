@@ -79,6 +79,10 @@ header {
   align-content: center;
 }
 
+header a {
+  color: black;
+}
+
 header a:visited {
   color: black;
 }
@@ -97,7 +101,7 @@ header img {
 
 .pageSection.hero {
   font-family: 'Karla';
-  font-size: 216pt0px;
+  font-size: 16pt;
   color: #fff;
   background: linear-gradient(180deg, #495e57 0 93%, #fff 93% 100%);
 }
@@ -428,12 +432,12 @@ button.reserve-table {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: baseline;
   padding: 10px;
 
   margin-left: auto;
   margin-right: auto;
 }
+
 .testimonials .review p {
   margin-top: 1rem;
   overflow: scroll;
@@ -444,10 +448,10 @@ button.reserve-table {
 }
 
 .testimonials img {
- height: 50px;
- width: 50px;
- border-radius: 50%;
- object-fit: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .testimonials .image-box {
@@ -455,7 +459,7 @@ button.reserve-table {
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  margin-top: 1rem;  
+  margin-top: 1rem;
 }
 
 .about img {
@@ -470,7 +474,7 @@ button.reserve-table {
 
 }
 
-.about .first-chef{
+.about .first-chef {
   transform: translate(170%, -30%);
 }
 
@@ -486,6 +490,7 @@ button.reserve-table {
   font-weight: 400;
   color: #EE9972;
 }
+
 .about .about-box {
 
   display: flex;
@@ -494,4 +499,115 @@ button.reserve-table {
 .about .content {
   text-align: left;
   width: 40%;
+}
+
+
+.pageSection.booking {
+  font-family: 'Karla';
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pageSection.booking h2 {
+  font-family: 'Markazi Text';
+  font-weight: normal;
+  font-size: 64px;
+  color: #f4ce14;
+}
+
+.pageSection.booking section {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border: 1px solid;
+  border-radius: 8px;
+}
+
+.pageSection.booking section:nth-child(1) {
+  border: 1px solid;
+  border-radius: 8px;
+  margin-top: 2rem;
+  max-width: 400px;
+}
+
+.pageSection.booking .bookingDataTable {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+
+}
+
+.pageSection.booking .bookingDataTable h3 {
+  font-family: 'Karla';
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 0.5em;
+}
+
+.pageSection.booking select:invalid,
+.pageSection.booking input:invalid {
+  border-color: red;
+  border-width: 2px;
+}
+
+.pageSection.booking select,
+.pageSection.booking input {
+  font-family: 'Karla';
+  font-size: 16px;
+  font-weight: 700;
+  height: 35px;
+  border-radius: 8px;
+  padding-left: 8px;
+}
+
+.pageSection.booking input[type="submit"] {
+  font-family: 'Karla';
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #f4ce14;
+  border-radius: 16px;
+  border: none;
+  height: 35px;
+  width: 200px;
+  margin-top: 2em;
+  padding: 0px;
+  transition: border 100ms ease-in-out;
+}
+
+.pageSection.booking input[type="submit"]:hover {
+  border: 1px solid black;
+}
+
+.pageSection.booking input[type="submit"]:disabled {
+  background-color: #D9D9D9;
+}
+
+.pageSection.confirmed {
+  font-family: 'Karla';
+  font-size: 16px;
+  font-weight: 700;
+  color: #f4ce14;
+  text-align: center;
+}
+
+.pageSection.booking #res-time {
+  width: 5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pageSection.booking #guests {
+  width: 3em;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -2,7 +2,7 @@
 
 function AboutSection({ title, subtitle, images, children }) {
     return (
-        <section className="pageSection about">
+        <section className="pageSection about" id="about">
             <section className="about-box">
                 <div className="content">
                 <h2>{title}</h2>

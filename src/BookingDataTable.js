@@ -11,11 +11,9 @@ function Header({ item }) {
 
 function Row({ item }) {
     let row = [];
-
     for (let celName in item)
-        row.push(<div key={item[celName]} >{item[celName]}</div>);
-
-    return row;
+        row.push(<div key={celName} >{item[celName]}</div>);
+    return <>{row}</>;
 
 }
 
@@ -27,24 +25,26 @@ function BookingDataTable({ bookingData }) {
     const container = {
         display: "grid",
         gridTemplateColumns: `repeat(${numColumns}, 1fr)`,
-        gridTemplateRows: `repeat(${numRow}, 1fr)`,
+        gridTemplateRows: `1.5fr repeat(${numRow}, 1fr)`,
         gridColumnGap: "2px",
         gridRowGap: "2px"
     }
 
     const rows = bookingData.map((item) =>
-        <Row key={item.resevationNumber} item={item} />
+        <Row key={item.reservationNumber} item={item} />
     )
 
 
     return (
-        <>
+        <section className="bookingDataTable">
             <h3>Booking Data</h3>
             <div className="bookingTable"  style={container}>
-                {bookingData[0] && <Header item={bookingData[0]} />}
+                {bookingData[0] && <Header key="header" item={bookingData[0]} />}
                 {rows}
             </div>
-        </>
+            {numRow === 0 && <div>No Data</div> }
+
+        </section>
     );
 
 }
