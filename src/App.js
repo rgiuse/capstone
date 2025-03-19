@@ -1,8 +1,8 @@
 import Header from './Header';
-import Nav from './Nav';
-import Footer from './Footer';
+import Nav from './components/Nav';
+import Footer from './components/Footer';
 import Main from './Main';
-import Head from './Head';
+import Head from './components/Head';
 
 import './App.css';
 

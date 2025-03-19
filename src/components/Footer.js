@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
-import logo from './assets/logo2.png';
+import logo from '../assets/logo2.png';
 
 function Footer(){
 
@@ -14,10 +14,10 @@ function Footer(){
             <div>
                 <h3>Site Map</h3>
                 <Link to="/">Home</Link>
-                <a href="#about">About</a>
-                <a href="#">Menu</a>
+                <a href="/about">About</a>
+                <a href="/menu">Menu</a>
                 <Link to="/booking">Reservations</Link>
-                <a href="#">Order Online</a>
+                {/* <a href="#">Order Online</a> */}
                 <a href="#">Login</a>
                 <div className='lastItem'/>
             </div>

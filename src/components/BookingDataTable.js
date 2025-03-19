@@ -1,8 +1,8 @@
 
 function Header({ item }) {
     let row = [];
-    for (let celName in item)
-        row.push(<div className="bookingTableHeader" key={celName} >{celName}</div>);
+    for (let cellName in item)
+        row.push(<div className="bookingTableHeader" key={cellName} >{cellName}</div>);
 
     return row;
 
@@ -11,8 +11,8 @@ function Header({ item }) {
 
 function Row({ item }) {
     let row = [];
-    for (let celName in item)
-        row.push(<div key={celName} >{item[celName]}</div>);
+    for (let cellName in item)
+        row.push(<div key={`${cellName}${item[cellName]}`} >{item[cellName]}</div>);
     return <>{row}</>;
 
 }

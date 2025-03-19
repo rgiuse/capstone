@@ -1,12 +1,12 @@
 
-import * as api from './api.js'
+import * as api from '../api.js'
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from "@testing-library/user-event";
 import { act } from 'react'
 
 import { BrowserRouter } from "react-router";
-import App from './App';
-import BookingForm from './BookingForm';
+import App from '../App.js';
+import BookingForm from './BookingForm.js';
 
 const today = new Date(new Date().toDateString());
 const tomorrow = new Date(new Date(Date.now() + 24 * 60 * 60 * 1000).toDateString());

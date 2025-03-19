@@ -476,6 +476,8 @@ button.reserve-table {
 
 .about .first-chef {
   transform: translate(170%, -30%);
+
+  margin-left: -158px;
 }
 
 .about h2 {
@@ -584,8 +586,12 @@ button.reserve-table {
   transition: border 100ms ease-in-out;
 }
 
+
+
+
+button.reserve-table:hover ,
 .pageSection.booking input[type="submit"]:hover {
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .pageSection.booking input[type="submit"]:disabled {

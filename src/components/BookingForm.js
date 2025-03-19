@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -56,10 +56,18 @@ function BookingForm({ availableTimes, updateAvailableTimes, bookingData, addBoo
         enableReinitialize: true,
     });
 
+
+
+    
+    const resDateValue = formik.values['res-date'];
+    const resDateTouched = formik.touched['res-date'];
+
+
     useEffect(() => {
         formik.setFieldValue('res-time', availableTimes[0]);
-
-    }, [availableTimes, formik.values['res-date'], formik.touched['res-date']])
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [availableTimes, resDateValue, resDateTouched])
 
     const errorStyle = {
         color: 'red',
@@ -92,7 +100,7 @@ function BookingForm({ availableTimes, updateAvailableTimes, bookingData, addBoo
                     <option>Anniversary</option>
                 </select>
                 {formik.errors["occasion"] && <p style={errorStyle}>{formik.errors["occasion"]}</p>}
-                <input type="submit" value="Make Your reservation" aria-label="On Click" disabled={formik.isSubmitting || formik.isValidating || !(formik.isValid && formik.dirty)} />
+                <input type="submit" value="Make Your reservation" aria-label="On Click make a reservation" disabled={formik.isSubmitting || formik.isValidating || !(formik.isValid && formik.dirty)} />
             </form>
         </section>
     );

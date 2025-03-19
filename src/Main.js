@@ -1,8 +1,10 @@
 import { Routes, Route, useNavigate } from "react-router";
 import { useEffect, useReducer, useState } from "react";
-import HomePage from "./HomePage";
-import BookingPage from "./BookingPage";
-import ConfirmedBooking from "./ConfirmedBooking.js";
+import HomePage from "./pages/HomePage.js";
+import BookingPage from "./pages/BookingPage.js";
+import AboutPage from "./pages/AboutPage.js";
+import ConfirmedBooking from "./pages/ConfirmedBooking.js";
+import MenuPage from "./pages/MenuPage.js";
 
 import * as api from './api.js'
 
@@ -37,6 +39,8 @@ function Main() {
             //await new Promise((callback) => setTimeout(callback, 500));
             
             updateAvailableTimes({ type: 'FETCHED_OK', value: fetchedData });
+
+            //setTimeout(()=> updateAvailableTimes({ type: 'FETCHED_OK', value: fetchedData }), 500  )
         }
         fetchData();
     }, [date])
@@ -50,7 +54,7 @@ function Main() {
     function submitForm(formData) {
 
         if (api.submitAPI(formData)) {
-            console.log(formData);
+            //console.log(formData);
             navigate('/confirmed', { state: formData });
         }
 
@@ -60,6 +64,8 @@ function Main() {
         <main>
             <Routes>
                 <Route path="/" element={<HomePage />}></Route>
+                <Route path="/about" element={<AboutPage />}></Route>
+                <Route path="/menu" element={<MenuPage />}></Route>
                 <Route path="/booking" element={<BookingPage availableTimes={availableTimes} updateAvailableTimes={updateAvailableTimes} submitForm={submitForm} />}></Route>
                 <Route path="/confirmed" element={<ConfirmedBooking />}></Route>
             </Routes>

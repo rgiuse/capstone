@@ -1,7 +1,7 @@
-import useBookingData from "./useBookingData";
+import useBookingData from "../hooks/useBookingData";
 
-import BookingForm from "./BookingForm";
-import BookingDataTable from "./BookingDataTable"
+import BookingForm from "../components/BookingForm";
+import BookingDataTable from "../components/BookingDataTable"
 
 
 function BookingPage({ availableTimes, updateAvailableTimes, submitForm }) {

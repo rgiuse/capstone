@@ -1,19 +1,19 @@
-import HeroSection from './HeroSection';
-import HighligthtsSection from './HighligthtsSection';
-import TestimonialsSection from './TestimonialsSection';
-import AboutSection from './AboutSection';
-import MenuCard from './MenuCard';
+import HeroSection from '../HeroSection';
+import HighligthtsSection from './sections/HighligthtsSection';
+import TestimonialsSection from './sections/TestimonialsSection';
+import AboutSection from './sections/AboutSection';
+import MenuCard from '../components/MenuCard';
 
-import imageSpecial from './assets/restauranfood.jpg'
-
-
-import greekSalad from './assets/greek salad.jpg'
-import lemonDessert from './assets/lemon dessert.jpg'
-import bruschetta from './assets/bruschetta.jpg'
+import imageSpecial from '../assets/restauranfood.jpg'
 
 
-import chefA from './assets/Mario and Adrian A.jpg'
-import chefB from './assets/restaurant chef B.jpg'
+import greekSalad from '../assets/greek salad.jpg'
+import lemonDessert from '../assets/lemon dessert.jpg'
+import bruschetta from '../assets/bruschetta.jpg'
+
+
+import chefA from '../assets/Mario and Adrian A.jpg'
+import chefB from '../assets/restaurant chef B.jpg'
 function HomePage() {
     const images = [chefA, chefB]
     return (

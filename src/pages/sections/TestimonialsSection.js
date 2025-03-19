@@ -1,9 +1,9 @@
-import TestimonialCard from "./TestimonialCard";
+import TestimonialCard from "../../components/TestimonialCard";
 
-import carloPic from './assets/testimonial-1.jpg'
-import anitaPic from './assets/testimonial-2.png'
-import francescaPic from './assets/testimonial-3.jpg'
-import violaPic from './assets/testimonial-4.png'
+import carloPic from '../../assets/testimonial-1.jpg'
+import anitaPic from '../../assets/testimonial-2.png'
+import francescaPic from '../../assets/testimonial-3.jpg'
+import violaPic from '../../assets/testimonial-4.png'
 
 function TestimonialsSection({ title, numTestimonial }) {
     return (
